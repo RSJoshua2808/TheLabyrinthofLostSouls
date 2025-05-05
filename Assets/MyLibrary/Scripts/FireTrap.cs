@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using SuperPupSystems.Helper;
 
 
 
@@ -7,11 +8,11 @@ public class FireTrap : MonoBehaviour
 {
     public ParticleSystem fireEffect;
     public float fireInterval = 3f;
-    public float damage = 10f;
+    public int damage = 1;
 
     private bool isActive;
 
-    /*void Start()
+    void Start()
     {
         StartCoroutine(FireRoutine());
     }
@@ -29,14 +30,14 @@ public class FireTrap : MonoBehaviour
         }
     }
 
-    /*void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (isActive && other.CompareTag("Player"))
         {
             // Apply damage or effects to player
-            other.GetComponent<PlayerHealth>().damaged(damage * Time.deltaTime);
+            other.GetComponent<Health>().Damage(damage);
         }
-    }*/
+    }
 }
 
 

@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "TerrainProject.sln"
+    "dotnet.defaultSolution": "TheLabyrinthofLostSouls.sln"
 }

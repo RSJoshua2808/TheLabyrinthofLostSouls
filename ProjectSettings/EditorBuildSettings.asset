@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MenuUI.unity
+    guid: b9c5d54a623894448b2ec78ebdc7f3ec
+  - enabled: 1
+    path: Assets/Scenes/TheLabyrinthOfLostSouls.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/LoseMenu.unity
+    guid: 432425c5929e052419c60205c9435bea
   m_configObjects: {}
