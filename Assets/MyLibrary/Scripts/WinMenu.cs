@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
+using SuperPupSystems.Helper;
 
-public class LoseMenu : MonoBehaviour
+public class WinMenu : MonoBehaviour
 {
+
     void Start()
     {
-        Lose();
+        Win();
     }
 
-    public void Lose()
+    public void Win()
     {
-        Debug.Log("You have Lost!");
+        Debug.Log("You have WON!");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 1.0f;
@@ -21,25 +23,16 @@ public class LoseMenu : MonoBehaviour
 
     public void Retry()
     {
+        //SceneManager.LoadSceneAysnc(1);
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadMenu()
     {
-        Debug.Log("Loading Main Menu");
+        Debug.Log("Win Scene");
         Time.timeScale = 1.0f;
         SceneManager.LoadSceneAsync("Menu UI");
     }
-
-    public void QuitGame()
-    {
-#if (UNITY_EDITOR)
-        Debug.Log("Quiting Play Mode");
-        EditorApplication.ExitPlaymode();
-#else
-        Debug.Log("Quitting Build");
-        Application.Quit();
-#endif
-    }
 }
+

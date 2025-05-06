@@ -6,7 +6,7 @@ public class ExitPortal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Congratulations! You Escaped the Labyrinth of Lost Souls!");
+            Debug.Log("Hark and Rejoice! You Have Escaped the Labyrinth of Lost Souls!");
         }
     }
 }
